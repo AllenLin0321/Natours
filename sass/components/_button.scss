@@ -1,0 +1,70 @@
+
+.btn{
+
+    &:link,
+    &:visited {
+        text-transform: uppercase;
+        text-decoration: none;
+        padding: 1.5rem 4rem;
+        display: inline-block;
+        border-radius: 10rem;
+        -webkit-transition: all .2s;
+        transition: all .2s;
+        position: relative;
+        font-size: 1.6rem;
+    }
+    
+    &:hover {
+        -webkit-transform: translateY(-3px);
+                transform: translateY(-3px);
+        -webkit-box-shadow: 0 1rem 2rem rgba($color-black,.2);
+                box-shadow: 0 1rem 2rem rgba($color-black,.2);
+        &::after {
+            -webkit-transform: scaleX(1.4) scaleY(1.6);
+                    transform: scaleX(1.4) scaleY(1.6);
+            opacity: 0;
+        }
+    }
+    
+    &:active {
+        -webkit-transform: translateY(-1 );
+                transform: translateY(-1 );
+        -webkit-box-shadow: 0 .5rem .1rem rgba($color-black,.2);
+                box-shadow: 0 .5rem .1rem rgba($color-black,.2);
+    }
+
+    &::after {
+        content: "";
+        display: inline-block;
+        height: 100%;
+        width: 100%;
+        border-radius: 10rem;
+    
+        /* Setup the position of  pseudo-element*/
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1;
+    
+        -webkit-transition: all .4s;
+    
+        transition: all .4s;
+    }   
+    &--white {
+        color: $color-grey-dark;
+        background-color: $color-white;
+        &::after {
+            background-color: $color-white;
+        
+        }
+    }
+    
+    &--animated {
+        -webkit-animation: moveInBottom .5s ease-out .75s;
+                animation: moveInBottom .5s ease-out .75s;
+    
+        /* Setup the styles up to 0% before the animation starts */
+        -webkit-animation-fill-mode: backwards;
+                animation-fill-mode: backwards;
+    }
+}

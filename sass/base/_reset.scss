@@ -1,0 +1,19 @@
+
+*,
+*::after,
+*::before {
+    padding: 0;
+    margin: 0;
+    box-sizing: inherit;
+
+}
+
+html {
+    /* Root Font-Size, Default->16px*/
+    font-size: 62.5%;
+}
+
+body {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box; 
+}
