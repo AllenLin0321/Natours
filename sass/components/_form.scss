@@ -15,11 +15,13 @@
         border-bottom: 3px solid transparent;
         width: 75%;
         display: block;
+        -webkit-transition: all .4s;
         transition: all .4s;
 
         &:focus{
             outline: none;
-            box-shadow: 0 1rem 2rem $box-shadow-small;
+            -webkit-box-shadow: 0 1rem 2rem $box-shadow-small;
+                    box-shadow: 0 1rem 2rem $box-shadow-small;
             border-bottom: 3px solid $color-primary;
             
             &:invalid{
@@ -43,13 +45,15 @@
         margin-left: 2rem;
         margin-top: .7rem;
         display: block;
+        -webkit-transition: all .3s;
         transition: all .3s;
     }
 
     &__input:placeholder-shown + &__label{
         opacity: 0;
         visibility: hidden;
-        transform: translateY(-4rem);
+        -webkit-transform: translateY(-4rem);
+                transform: translateY(-4rem);
     }
 
     // Radio Buttton
@@ -88,9 +92,11 @@
             position: absolute;
             top: 50%;
             left: 50%;
-            transform: translate(-50%,-50%);
+            -webkit-transform: translate(-50%,-50%);
+                    transform: translate(-50%,-50%);
             background-color: $color-primary;
             opacity: 0;
+            -webkit-transition: opacity .2s;
             transition: opacity .2s; 
         }
     }
