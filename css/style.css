@@ -1,3 +1,19 @@
+/*  Media Query Manager
+
+0 - 600px: Phone
+600 - 900px: Tablet Portrait
+900 - 1200px: Tablet landscape
+[1200-1800] is where our normal styles apply
+1800+ px: Big desktop
+
+$breakpoint arguement choices:
+- phone
+- tab-port
+- tab-land
+- big-desktop
+
+1em = 16px
+*/
 /* For Heading-Primary-main */
 @-webkit-keyframes moveInLeft {
   0% {
@@ -78,11 +94,21 @@
 *::before {
   padding: 0;
   margin: 0;
+  -webkit-box-sizing: inherit;
   box-sizing: inherit; }
 
 html {
   /* Root Font-Size, Default->16px*/
   font-size: 62.5%; }
+  @media (max-width: 112.5em) {
+    html {
+      font-size: 75%; } }
+  @media (max-width: 75em) {
+    html {
+      font-size: 56.25%; } }
+  @media (max-width: 56.25em) {
+    html {
+      font-size: 50%; } }
 
 body {
   -webkit-box-sizing: border-box;
@@ -501,6 +527,7 @@ body {
     position: absolute;
     top: 50%;
     left: 50%;
+    -webkit-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
     width: 75%;
     background-color: #fff;
@@ -511,7 +538,7 @@ body {
     overflow: hidden;
     opacity: 0;
     transform: translate(-50%, -50%) scale(0.5);
-    transition: all .4s .45s; }
+    transition: all .4s .4s; }
   .popup__left {
     width: 33.333333%;
     display: table-cell; }
