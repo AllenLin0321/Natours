@@ -11,7 +11,14 @@
     opacity: 0;
     visibility: hidden;
 
+    -webkit-transition: all .4s;
     transition: all .4s;
+
+    @supports(-webkit-backdrop-filter: blur(10px)) or (backdrop-filter: blur(10px)) {
+        -webkit-backdrop-filter: blur(10px);
+        backdrop-filter: blur(10px);
+        background-color: rgba($color: $color-black, $alpha: .3);
+    }
 
     &__content {
         @include absCenter;
@@ -23,7 +30,9 @@
         display: table;
         overflow: hidden;
         opacity: 0;
-        transform: translate(-50%, -50%) scale(.5);
+        -webkit-transform: translate(-50%, -50%) scale(.5);
+                transform: translate(-50%, -50%) scale(.5);
+        -webkit-transition: all .4s .4s;
         transition: all .4s .4s;
     }
 
@@ -86,7 +95,8 @@
                 hyphens: auto; 
 
         @include respond(phone) {
-            column-count: 1;
+            -webkit-column-count: 1;
+                    column-count: 1;
         }
     }
 
@@ -99,7 +109,8 @@
     &:target &__content {
        
         opacity: 1;
-        transform:translate(-50%, -50%) scale(1);
+        -webkit-transform:translate(-50%, -50%) scale(1);
+                transform:translate(-50%, -50%) scale(1);
         
     }
 

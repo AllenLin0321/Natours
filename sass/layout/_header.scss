@@ -16,7 +16,7 @@
             clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100% );
 
     // 192 dots per inch -> the resolution of the Apple retina screen
-    @media (-webkit-min-device-pixel-ratio: 2) and (min-width: 37.5em),
+    @media only screen and (-webkit-min-device-pixel-ratio: 2) and (min-width: 37.5em),
            (min-resolution: 192dpi) and (min-width: 37.5em),
            (min-width: 125em) {
         background-image: -webkit-gradient(

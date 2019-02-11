@@ -8,7 +8,8 @@
     padding: 6rem;
     padding-left: 9rem;
     font-size: $default-font-size;
-    transform: skewX(-12deg);
+    -webkit-transform: skewX(-12deg);
+            transform: skewX(-12deg);
 
     @include respond(tab-port) {
         width: 100%;
@@ -17,7 +18,8 @@
     }
     
     @include respond(phone) {
-        transform: skewX(0);
+        -webkit-transform: skewX(0);
+                transform: skewX(0);
         padding: 3rem;
         padding-left: 3rem;
     }
@@ -33,7 +35,8 @@
                 transform: translate(-3rem,-1rem) skewX(12deg);
         position: relative;
         @include respond(phone) {
-                transform: skewX(0);
+                -webkit-transform: skewX(0);
+                        transform: skewX(0);
                 margin-right: 3rem;
         }
     }
@@ -51,7 +54,8 @@
         -webkit-transform: skewX(12deg);
                 transform: skewX(12deg);
         @include respond(phone) {
-                transform: skewX(0);
+                -webkit-transform: skewX(0);
+                        transform: skewX(0);
         }
     }
 
