@@ -35,8 +35,8 @@
     &:active,
     &:focus {
         outline: none;
-        -webkit-transform: translateY(-1 );
-                transform: translateY(-1 );
+        -webkit-transform: translateY(-1px);
+                transform: translateY(-1px);
         -webkit-box-shadow: 0 .5rem .1rem $box-shadow-small;
                 box-shadow: 0 .5rem .1rem $box-shadow-small;
     }
@@ -53,17 +53,13 @@
         top: 0;
         left: 0;
         z-index: -1;
-    
-        -webkit-transition: all .4s;
-    
         transition: all .4s;
     }   
     &--white {
         color: $color-grey-dark;
         background-color: $color-white;
-        &::after {
+        &::after { 
             background-color: $color-white;
-        
         }
     }
     
